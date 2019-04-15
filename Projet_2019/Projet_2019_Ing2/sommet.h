@@ -4,16 +4,18 @@
 class sommet
  {
  public:
-    sommet();
+    sommet(int,int,std::vector<float>);
     int getID() const {return m_ID;};
     int getMarque() const {return m_marque;};
+    void ajouterVoisin(sommet);
     ~sommet();
  protected:
 
  private:
-    const int m_ID;
+    int m_ID;
     int m_marque;
-    const std::vector<const float> coords;
+    std::vector<sommet> m_voisins;
+    const std::vector<float> m_coords;
  };
 
 #endif // SOMMET_H_INCLUDED
