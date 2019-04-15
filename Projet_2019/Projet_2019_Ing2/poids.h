@@ -4,12 +4,12 @@
 class poids
  {
  public:
-    poids(const int);
-    int getNombrePoids() const {return valeurs.size();};
+    poids(std::vector<float>);
+    int getNombrePoids() const {return m_valeurs.size();};
     ~poids();
  protected:
 
  private:
-    std::vector<const float> valeurs;
+    std::vector<float> m_valeurs;
  };
 #endif // POIDS_H_INCLUDED

@@ -6,15 +6,16 @@
 class arete
  {
  public:
-    arete();
+    arete(sommet,sommet,poids);
     poids getPoids() const {return m_p;};
-    std::vector<const sommet*> const {return m_ext;};
+    std::vector<sommet> getSommets() const {return m_ext;};
     ~arete();
  protected:
 
  private:
-     std::vector<const sommet*> m_ext;
+    std::vector<sommet> m_ext;
     poids m_p;
+    bool m_used;
  };
 
 #endif // ARETE_H_INCLUDED
