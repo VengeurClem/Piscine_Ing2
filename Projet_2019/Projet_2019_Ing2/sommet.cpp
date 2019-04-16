@@ -14,6 +14,10 @@ sommet::sommet(int id,int M,std::vector<float>coords):m_ID{id},m_marque{M},m_coo
 void sommet::ajouterVoisin(sommet voisin){
     m_voisins.push_back(voisin);
 }
+void sommet::setMarque(int a)
+{
+    m_marque=a;
+}
 
 sommet::~sommet()
 {
