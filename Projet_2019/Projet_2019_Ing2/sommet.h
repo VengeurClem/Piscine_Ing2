@@ -7,6 +7,10 @@ class sommet
     sommet(int,int,std::vector<float>);
     int getID() const {return m_ID;};
     int getMarque() const {return m_marque;};
+    void setMarque(int);
+    float getX() const {return m_coords[0];};
+    float getY() const {return m_coords[1];};
+    float getZ() const {return m_coords[2];};
     void ajouterVoisin(sommet);
     ~sommet();
  protected:
