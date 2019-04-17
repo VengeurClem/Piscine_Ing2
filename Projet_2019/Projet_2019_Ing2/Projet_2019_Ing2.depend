@@ -2,7 +2,7 @@
 1514144174 source:c:\users\clem\desktop\projet_2019_ing2\projet_2019_ing2\main.cpp
 	<iostream>
 
-1555328561 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\main.cpp
+1555499710 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\main.cpp
 	<iostream>
 	<queue>
 	<stack>
@@ -11,19 +11,19 @@
 	<unordered_set>
 	"graphe.h"
 
-1555328480 c:\users\clem\desktop\projet_2019\projet_2019_ing2\graphe.h
+1555412965 c:\users\clem\desktop\projet_2019\projet_2019_ing2\graphe.h
 	<string>
 	"poids.h"
 	"arete.h"
 	"sommet.h"
 
-1555325022 c:\users\clem\desktop\projet_2019\projet_2019_ing2\poids.h
+1555341405 c:\users\clem\desktop\projet_2019\projet_2019_ing2\poids.h
 
 1555326933 c:\users\clem\desktop\projet_2019\projet_2019_ing2\arete.h
 	"poids.h"
 	"sommet.h"
 
-1555327925 c:\users\clem\desktop\projet_2019\projet_2019_ing2\sommet.h
+1555422324 c:\users\clem\desktop\projet_2019\projet_2019_ing2\sommet.h
 
 1555328376 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\poids.cpp
 	<iostream>
@@ -43,7 +43,7 @@
 	<unordered_set>
 	"arete.h"
 
-1555328860 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\sommet.cpp
+1555422324 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\sommet.cpp
 	<iostream>
 	<queue>
 	<stack>
@@ -52,13 +52,31 @@
 	<unordered_set>
 	"sommet.h"
 
-1555328909 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\graphe.cpp
+1555498795 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\graphe.cpp
 	<fstream>
+	<utility>
+	<string>
+	<complex>
+	<tuple>
 	<iostream>
 	<queue>
 	<stack>
-	<string>
 	<unordered_map>
 	<unordered_set>
+	"math.h"
 	"graphe.h"
+	<algorithm>
+	<vector>
+	<bitset>
+	<queue>
+
+1555425110 source:c:\users\clem\desktop\projet_2019\projet_2019_ing2\svgfile.cpp
+	"svgfile.h"
+	<iostream>
+	<sstream>
+
+1555425105 c:\users\clem\desktop\projet_2019\projet_2019_ing2\svgfile.h
+	<string>
+	<fstream>
+	<set>
 
