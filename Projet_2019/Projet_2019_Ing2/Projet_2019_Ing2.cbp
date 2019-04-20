@@ -32,31 +32,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="arete.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="arete.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="graphe.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="graphe.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Linker>
+			<Add library="alleg44.dll" />
+		</Linker>
+		<Unit filename="arete.cpp" />
+		<Unit filename="arete.h" />
+		<Unit filename="graphe.cpp" />
+		<Unit filename="graphe.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="poids.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="poids.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="sommet.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="sommet.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="poids.cpp" />
+		<Unit filename="poids.h" />
+		<Unit filename="sommet.cpp" />
+		<Unit filename="sommet.h" />
+		<Unit filename="svgfile.cpp" />
+		<Unit filename="svgfile.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
