@@ -6,6 +6,7 @@ class sommet
  public:
     sommet(int,int,std::vector<float>);
     int getID() const {return m_ID;};
+    std::vector<sommet> getSuccesseur() const {return m_voisins;};
     int getMarque() const {return m_marque;};
     void setMarque(int);
     float getX() const {return m_coords[0];};
