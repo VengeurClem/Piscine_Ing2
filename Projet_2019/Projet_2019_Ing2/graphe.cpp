@@ -36,12 +36,12 @@ graphe::graphe(std::string nomFichier1, std::string nomFichier2)
     for (int i=0; i<ordre; ++i)
     {
         std::vector<float> coords;
-        ifs1>>id; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
-        ifs1>>x; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
+        ifs1>>id; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donn√©es sommet");
+        ifs1>>x; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donn√©es sommet");
         coords.push_back(x);
-        ifs1>>y; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
+        ifs1>>y; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donn√©es sommet");
         coords.push_back(y);
-        //ifs1>>y; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donnÈes sommet");
+        //ifs1>>y; if(ifs1.fail()) throw std::runtime_error("Probleme lecture donn√©es sommet");
         coords.push_back(0);
         m_sommets.push_back(sommet(id, i, coords));
     }
@@ -71,7 +71,7 @@ graphe::graphe(std::string nomFichier1, std::string nomFichier2)
             p_p_poids.push_back(C1);
             p=p+C1;
         }
-        //ajouter chaque extrÈmitÈ ‡ la liste des voisins de l'autre (graphe non orientÈ)
+        //ajouter chaque extr√©mit√© √† la liste des voisins de l'autre (graphe non orient√©)
         m_sommets[id].ajouterVoisin(m_sommets[id_bis]);
         m_sommets[id_bis].ajouterVoisin(m_sommets[id]);
         m_aretes.push_back(arete(m_sommets[id],m_sommets[id_bis],poids(p_p_poids)));
@@ -126,7 +126,7 @@ std::vector<graphe> graphe::SolAd(BITMAP* buffer)
         std::vector<sommet> s=m_sommets;
         std::vector<sommet> p;
         std::vector<sommet>::iterator Vide;
-        //crÈation de vecteur de int pour simuler du binaire
+        //cr√©ation de vecteur de int pour simuler du binaire
         for(float i=pow(2,m_sommets.size()-1)-1;i<n;i++)
         {
             mem=i;
@@ -163,7 +163,7 @@ std::vector<graphe> graphe::SolAd(BITMAP* buffer)
 
         for(int i=0; i<c_choisi.size();i++)
         {
-            //on prends les arÍtes corespondantes au binaire
+            //on prends les ar√™tes corespondantes au binaire
             for(unsigned int j=0; j<c_choisi[i].size();j++)
             {
                 if(c_choisi[i][j]==1)
@@ -200,7 +200,7 @@ std::vector<graphe> graphe::SolAd(BITMAP* buffer)
                 }
                 Oh_BFS.pop();
             }
-            //on vÈrifie qu'il y a tout les sommets
+            //on v√©rifie qu'il y a tout les sommets
             if(tableau.size()!=m_sommets.size())
             {
                 c_choisi.erase(c_choisi.begin()+i);
@@ -215,7 +215,7 @@ std::vector<graphe> graphe::SolAd(BITMAP* buffer)
         std::vector<std::pair<float,float>>tri_poids;
         std::vector<std::pair<float,float>>tri_poids2;
 
-        //rÈcupÈration des poids pour dÈterminer la frontiËre de Pareto
+        //r√©cup√©ration des poids pour d√©terminer la fronti√®re de Pareto
         for(unsigned i=0; i<c_choisi.size();i++)
         {
             std::pair<float,float> buffer_p{0,0};
@@ -245,7 +245,7 @@ std::vector<graphe> graphe::SolAd(BITMAP* buffer)
                    Sol_Pareto.push_back(tri_poids[i]);
                }
         }
-        // vu que le sort ne regarde pas le deuxiËme poids on vÈrifie bien qu'on ne prends pas des intrus
+        // vu que le sort ne regarde pas le deuxi√®me poids on v√©rifie bien qu'on ne prends pas des intrus
         for(unsigned int i=1;i<Sol_Pareto.size();i++)
         {
            if(Sol_Pareto[i-1].first == Sol_Pareto[i].first)
@@ -275,18 +275,6 @@ std::vector<graphe> graphe::SolAd(BITMAP* buffer)
             }
         }
         blit(buffer,screen,0,0,0,0,SCREEN_W,SCREEN_H);
-        /*
-        rectfill(buffer,0,0,SCREEN_W,SCREEN_H,makecol(0,0,0));
-        for(unsigned int i=0; i<m_sommets.size();i++)
-        {
-            circlefill(buffer,m_sommets[i].getX(),m_sommets[i].getY(),10,makecol(255,0,0));
-        }
-        for(unsigned int i=0; i<m_aretes.size();i++)
-        {
-            line(buffer, m_sommets[m_aretes[i].getSommets()[0].getID()].getX(),m_sommets[m_aretes[i].getSommets()[0].getID()].getY(),m_sommets[m_aretes[i].getSommets()[1].getID()].getX(),m_sommets[m_aretes[i].getSommets()[1].getID()].getY(),makecol(0,255,0));
-        }
-        blit(buffer,screen,0,0,0,0,SCREEN_W,SCREEN_H);
-        */
         return AReturn;
 }
 
@@ -378,10 +366,10 @@ void graphe::Prim(int z) const
     std::vector <int> ordre_lect;
     ordre_lect.push_back(0);
     ///Algorithme
-    for(unsigned int i=0; i<m_sommets.size()-1;i++)//boucle pour attendre les n-1 arÍtes
+    for(unsigned int i=0; i<m_sommets.size()-1;i++)//boucle pour attendre les n-1 ar√™tes
     {
          int rang_Pmin=0;
-        for(unsigned int j=0; j<m_aretes.size(); j++)//boucle pour ajouter les arÍtes du nouveau point
+        for(unsigned int j=0; j<m_aretes.size(); j++)//boucle pour ajouter les ar√™tes du nouveau point
         {
             if(marque[m_aretes[j].getSommets()[0].getID()]==1 && marque[m_aretes[j].getSommets()[1].getID()]!=1)
             {
@@ -426,7 +414,7 @@ graphe::~graphe()
 
 
         /*
-        Ceci est une version non optimisÈ du test de connexitÈ
+        Ceci est une version non optimis√© du test de connexit√©
         std::vector<std::pair<int,int >> Choix_Arete;
         std::pair<int,int> buff;
         std::queue<int> Oh_BFS;
